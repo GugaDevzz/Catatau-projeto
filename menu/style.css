@@ -1,0 +1,171 @@
+:root {
+  --color-catatau-cream: #f5ebdc; 
+  --color-catatau-brown: #502314; 
+  --color-catatau-orange: #ff8732; 
+  --color-vermelhao: #c40700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--color-catatau-cream);
+}
+
+.top-banner {
+  background-color: var(--color-catatau-orange);
+  color: var(--color-bk-brown);
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+header {
+  background-color: var(--color-catatau-cream);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logonav img {
+  position: relative;
+  right: 100px;
+  top: 30px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 10%;
+  border: solid 1px;
+}
+
+.nav-links {
+  display: flex;
+  position: relative;
+  list-style: none;
+  right: 40px;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--color-catatau-brown);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--color-vermelhao);
+}
+
+.user-area {
+  font-size: 14px;
+  color: var(--color-catatau-brown);
+  text-align: right;
+}
+
+.user-area a{
+  text-decoration: underline;
+  color: var(--color-catatau-brown);
+  font-weight: bold;
+}
+
+.hero {
+  width: 100%;
+}
+
+.bannerlanche img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.menu-hamburguer i{
+  display: none;
+      font-size: 40px;
+      border: solid 2px;
+      border-radius: 15%;
+      position: relative;
+      margin-left: -240px ;
+    }
+
+
+@media (max-width: 768px) {
+    
+    .nav-links {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #f5ebdc;; 
+      display: flex;
+      justify-content: space-around; 
+      align-items: center;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1); 
+      z-index: 9990;
+    }
+
+    .nav-links a {
+      font-size: 90%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 700;
+      color: var(--color-bk-brown);
+      text-decoration: none;
+    }
+
+    .navbar {
+      Justify-content: center; 
+    }
+    
+    .user-area {
+      display: none;
+      position: absolute;
+      right: 15%;
+      font-size: 11px;
+    }
+    
+    .logonav img {
+      position: static;      
+      margin: 30px;
+      margin-bottom: -25px;
+      width: 80px; 
+    }
+
+    header {
+        position: relative;
+        z-index: 11;
+    }
+
+    .hero {
+        position: relative;
+        z-index: 1;
+    }
+
+    body {
+      padding-bottom: 70px;
+    }
+
+    .menu-hamburguer i{
+      font-size: 40px;
+      border: solid 2px;
+      border-radius: 15%;
+      position: relative;
+      margin-left: -240px ;
+    }
+
+  }
+
+
+
+
