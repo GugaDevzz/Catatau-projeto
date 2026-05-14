@@ -4,14 +4,19 @@
 }
 
 :root {
-  --color-catatau-cream: #f5ebdc; 
-  --color-catatau-brown: #502314; 
-  -color-catatau-orange: #ff8732; 
+  --color-catatau-cream: #f5ebdc;
+  --color-catatau-brown: #502314;
+  -color-catatau-orange: #ff8732;
   --color-vermelhao: #c40700;
   --color-verdao: #00bf63;
   --color-laranjao: #FF9225;
   --color-laranjinha: #e77505;
 }
+
+body{
+  background-color: black;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,16 +24,30 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: var(--color-laranjao);
+.banner-login img {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;     
+  z-index: -1; 
+  opacity: 0.5; 
 }
 
 .navbar {
-   background-color: #f5ece1; 
+  background-color: #f5ece1;
   height: 110px;
-  width: auto;              
-  display: flex;         
+  width: auto;
+  display: flex;
   position: relative;
+}
+
+.top-banner {
+  background-color: var(--color-catatau-orange);
+  color: var(--color-bk-brown);
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .logonav img {
@@ -39,19 +58,19 @@ body {
   border-radius: 10%;
   border: solid 1px;
 }
-.voltar-menu{
+
+.voltar-menu {
   font-size: 25px;
-  color: var(--color-catatau-brown);
-  background-color: var(--color-vermelhao);
+  color: white;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-weight: 700;
   text-decoration: none;
   padding-top: 4px;
   margin-top: 50px;
   margin-left: 320px;
-  border: solid 1px var(--color-catatau-cream)
 }
 
 .quadrado {
@@ -60,7 +79,7 @@ body {
   align-items: center;
 }
 
-.logocadastro img{
+.logocadastro img {
   border-radius: 10%;
   margin-top: 20%;
   width: 120px;
@@ -68,7 +87,7 @@ body {
 }
 
 .cadastro {
-  background: linear-gradient(#731919, #c40801, #ff3e38) ;
+  background: linear-gradient(#731919, #c40801, #ff3e38);
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -80,7 +99,7 @@ body {
   border: black solid 2px
 }
 
-.primeiro{
+.primeiro {
   color: white;
   font-family: "Ultra", serif;
   display: flex;
@@ -89,7 +108,7 @@ body {
   margin-top: 10px;
 }
 
- .segundo {
+.segundo {
   display: flex;
   text-align: center;
   font-size: 15px;
@@ -132,32 +151,33 @@ body {
 }
 
 .container-tel {
-    width: 100%; 
-    text-align: center; 
-    margin-bottom: 2px; 
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2px;
 }
 
 .ddd {
-    background-color: #c43340; /* */
-    text-align: center;
-    padding: 8px; 
-    width: 15%; 
-    color: gray;
-    border: 2px solid #ad1a06;
-    border-radius: 5px;
-    display: inline-block; 
+  background-color: #c43340;
+  /* */
+  text-align: center;
+  padding: 8px;
+  width: 15%;
+  color: gray;
+  border: 2px solid #ad1a06;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 .numero {
-    background-color: #c43340;
-    font-size: 15px;
-    padding: 8px; 
-    width: 40%; 
-    color: gray;
-    border: 2px solid #ad1a06;
-    border-radius: 5px;
-    display: inline-block;
-    margin-left: 0px; 
+  background-color: #c43340;
+  font-size: 15px;
+  padding: 8px;
+  width: 40%;
+  color: gray;
+  border: 2px solid #ad1a06;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 0px;
 }
 
 .senha {
@@ -183,21 +203,21 @@ body {
 }
 
 .container-box {
-    display: flex;  
-    justify-content: left;           
-    align-items: center; 
-    font-size: 13px;     
-    gap: 5px;                 
-    margin-bottom: 10px;
-    color: black;             
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 13px;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: black;
 }
 
 #box {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.cadastrar{
-  text-align: center;  
+.cadastrar {
+  text-align: center;
   background-color: var(--color-laranjao);
   font-size: 20px;
   padding: 15px;
@@ -209,8 +229,8 @@ body {
   margin-bottom: 5px;
 }
 
-.existente{
-  text-align: center;  
+.existente {
+  text-align: center;
   background-color: #c43340;
   font-size: 17px;
   padding: 15px;
