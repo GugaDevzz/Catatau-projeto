@@ -4,17 +4,10 @@
 }
 
 :root {
-  --color-catatau-cream: #f5ebdc;
-  --color-catatau-brown: #502314;
-  -color-catatau-orange: #ff8732;
+  --color-catatau-cream: #f5ebdc; 
+  --color-catatau-brown: #502314; 
+  --color-catatau-orange: #ff8732; 
   --color-vermelhao: #c40700;
-  --color-verdao: #00bf63;
-  --color-laranjao: #FF9225;
-  --color-laranjinha: #e77505;
-}
-
-body{
-  background-color: black;
 }
 
 * {
@@ -22,23 +15,13 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  /* width: 100%; */
+    /* height: 100vh; */
+    overflow: hidden; 
 }
 
-.banner-login img {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;     
-  z-index: -1; 
-  opacity: 0.5; 
-}
-
-.navbar {
-  background-color: #f5ece1;
-  height: 110px;
-  width: auto;
-  display: flex;
-  position: relative;
+body {
+  background-color: rgb(32, 32, 32);
 }
 
 .top-banner {
@@ -50,16 +33,37 @@ body{
   font-weight: bold;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;;
+  height: 90px;
+  background-color: var(--color-catatau-cream);
+}
+
 .logonav img {
+  position: absolute;
+  top: 70px;
+  left: 200px;
   width: 120px;
   cursor: pointer;
-  margin-top: 20px;
-  margin-left: 330px;
   border-radius: 10%;
   border: solid 1px;
+  z-index: 15;
+}
+
+.banner-login img {
+  position: absolute;
+  opacity: 0.5;
+  margin-top: px;
+  width: 100%;
+  height: auto;
+  z-index: -100;
 }
 
 .voltar-menu {
+  position: absolute;
   font-size: 25px;
   color: white;
   display: flex;
@@ -69,8 +73,9 @@ body{
   font-weight: 700;
   text-decoration: none;
   padding-top: 4px;
-  margin-top: 50px;
-  margin-left: 320px;
+  margin-top: 150px;
+  margin-left: 390px;
+  z-index: 50;
 }
 
 .quadrado {
@@ -92,11 +97,13 @@ body{
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  margin: 3%;
+  margin: 4%;
   width: 30%;
   border-radius: 4%;
+  z-index: 100;
   /* transform: scale(1.1); */
   border: black solid 2px
+  
 }
 
 .primeiro {
@@ -218,7 +225,7 @@ body{
 
 .cadastrar {
   text-align: center;
-  background-color: var(--color-laranjao);
+  background-color: var(--color-catatau-orange);
   font-size: 20px;
   padding: 15px;
   width: 50%;
