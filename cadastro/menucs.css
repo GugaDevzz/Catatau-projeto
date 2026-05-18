@@ -150,10 +150,13 @@ body {
   font-size: 15px;
   padding: 8px;
   width: 55%;
-  /* color: white; */
+  color: white;
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
+}
+.nome::placeholder{
+  color: rgb(53, 53, 53);
 }
 
 .email {
@@ -166,6 +169,10 @@ body {
   border-radius: 5px;
   margin: 2px;
 }
+.email::placeholder{
+    color: rgb(53, 53, 53);
+}
+
 
 #CPF {
   background-color: #c43340;
@@ -176,6 +183,9 @@ body {
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
+}
+#CPF::placeholder{
+    color: rgb(53, 53, 53);
 }
 
 .container-tel {
@@ -190,10 +200,13 @@ body {
   text-align: center;
   padding: 8px;
   width: 15%;
-  color: gray;
+  color: white;
   border: 2px solid #ad1a06;
   border-radius: 5px;
   display: inline-block;
+}
+.ddd::placeholder{
+    color: rgb(53, 53, 53);
 }
 
 .numero {
@@ -207,6 +220,9 @@ body {
   display: inline-block;
   margin-left: 0px;
 }
+.numero::placeholder{
+    color: rgb(53, 53, 53);
+}
 
 .senha {
   background-color: #c43340;
@@ -218,6 +234,10 @@ body {
   border-radius: 5px;
   margin: 2px;
 }
+.senha::placeholder{
+    color: rgb(53, 53, 53);
+}
+
 
 .repetir-senha {
   background-color: #c43340;
@@ -228,6 +248,9 @@ body {
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
+}
+.repetir-senha::placeholder{
+    color: rgb(53, 53, 53);
 }
 
 .container-box {
