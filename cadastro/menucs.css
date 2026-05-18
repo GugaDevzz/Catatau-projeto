@@ -17,7 +17,7 @@
   font-family: 'Montserrat', sans-serif;
   /* width: 100%; */
     /* height: 100vh; */
-    overflow: hidden; 
+    /* overflow: hidden;  */
 }
 
 body {
@@ -53,14 +53,14 @@ body {
   z-index: 15;
 }
 
-.banner-login img {
+/* .banner-login img {
   position: absolute;
   opacity: 0.5;
   margin-top: px;
   width: 100%;
   height: auto;
   z-index: -100;
-}
+} */
 
 .voltar-menu {
   position: absolute;
@@ -82,6 +82,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  min-height: calc(100vh - 190px); /* Ocupa a tela inteira descontando o topo e o footer */
+  width: 100%;
+  position: relative;
+}
+
+.quadrado::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    /* Configurações da sua imagem */
+    background-image: url('./img/banner-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+    opacity: 0.5; 
+    z-index: 1;
 }
 
 .logocadastro img {
@@ -101,7 +122,7 @@ body {
   width: 30%;
   border-radius: 4%;
   z-index: 100;
-  /* transform: scale(1.1); */
+  transform: scale(0.8);
   border: black solid 2px
   
 }
@@ -129,7 +150,7 @@ body {
   font-size: 15px;
   padding: 8px;
   width: 55%;
-  color: gray;
+  /* color: white; */
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
@@ -140,7 +161,7 @@ body {
   font-size: 15px;
   padding: 8px;
   width: 55%;
-  color: gray;
+  color: white;
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
@@ -247,4 +268,108 @@ body {
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin-bottom: 40px;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;;
+  height: 100px;
+  background-color: var(--color-catatau-cream);
+}
+
+/* Media query para telas de 1024px de largura ou menos */
+@media (max-width: 1500px) {
+  /* 1. Ajusta o logo do topo para não ficar perdido na esquerda */
+    .logonav img {
+        left: 5%;          /* Troca os 200px fixos por porcentagem */
+        top: 65px;
+        width: 100px;      /* Reduz um pouquinho o tamanho para combinar */
+    }
+
+    /* 2. Corrige o botão voltar para ele não bater no formulário */
+    .voltar-menu {
+        margin-left: 0;    /* Zera a margem fixa que jogava ele pra direita */
+        left: 5%;          /* Alinha ele na esquerda junto com o logo */
+        margin-top: 180px; /* Ajusta a altura dele para ficar abaixo do logo */
+        font-size: 20px;   /* Diminui um pouco a fonte */
+    }
+
+    /* 3. Ajusta a largura do formulário de cadastro */
+    .cadastro {
+        width: 40%;        /* Aumenta a largura (era 30%) para os inputs não esmagarem em telas menores */
+        transform: scale(0.9); /* Um ajuste leve na escala para caber na altura */
+        margin: 2%;
+    }
+
+    /* 4. Aumenta a largura dos campos internos para melhorar a digitação */
+    .nome, .email, #CPF, .senha, .repetir-senha {
+        width: 75%;        /* Deixa os inputs um pouco mais largos e confortáveis */
+    }
+
+    .container-tel {
+        width: 75%;        /* Ajusta o container do telefone também */
+        margin: 0 auto;
+    }
+    
+    .ddd { width: 25%; }
+    .numero { width: 70%; }
+}
+
+@media (max-width: 1500px) {
+/* Media query para telas de 900px de largura ou menos (Tablets e telas compactas) */
+@media (max-width: 900px) {
+    
+    /* 1. Remove o position absolute e centraliza a Navbar */
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: column; /* Empilha o logo e o voltar verticalmente */
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* 2. Reseta as posições fixas do Logo para ele ficar centralizado no topo */
+    .logonav img {
+        position: static; /* Sai do modo "fantasma" absoluto */
+        width: 90px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* 3. Transforma o botão voltar em um link centralizado comum abaixo do logo */
+    .voltar-menu {
+        display: none;
+        position: static; /* Também sai do absoluto */
+        margin: 10px 0 0 0; /* Zera os margins antigos */
+        font-size: 18px;
+    }
+
+    /* 4. Alarga o formulário de cadastro para ocupar melhor o espaço da tela */
+    .cadastro {
+        width: 85%; /* Aumenta para 70% para os campos ficarem bem visíveis */
+        transform: scale(0.80); /* Quase o tamanho original, sem esmagar */
+        margin: 4% auto;
+    }
+
+    /* 5. Inputs quase totais para facilitar o toque/digitação */
+    .nome, .email, #CPF, .senha, .repetir-senha {
+        width: 82%; 
+    }
+
+    .container-tel {
+        width: 85%;
+    }
+
+    /* Ajuste fino dos botões laranjas lá embaixo para não ficarem gigantes */
+    .cadastrar, .existente {
+        width: 70%;
+    }
+}
 }

@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catatau Lanches</title>
-    <link rel="stylesheet" href="./menucss.css">
-    <link rel="icon" type="image/png" href="./imagem/catatau.png" alt="favicon do catatau"> 
+    <link rel="stylesheet" href="menucss.css">
+    <link rel="icon" type="image/png" href="./" alt="favicon do catatau">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    
+    <div class="top-banner">
+        UAU! Com uma conta criada você pode favoritar seus lanches no catatau.
+    </div>
+    
     <nav class="navbar">
         <div class="nav-container">
             <section class="logonav">
                 <img src="./img/catatauimg.png">
             </section>
-
+            
             <a 
             href="/index.html" class="voltar-menu">
-                <i class="material-icons">arrow_back_ios</i>
-                <span class="voltar">Voltar</span>
-            </a>
-            
-            <section class="banner-login">
-                <img src="./img/banner-login.png" alt="banner do lugar">
-            </section>
-        </div>
-    </nav>
-    <section class="quadrado">
-        <section class="login">
-            <div class="logologin">
-            <img src="./img/catatauimg.png">
-            </div>
-        <h1 class="primeiro">Entrar no catatau</h1>
-            
-        <div class="segundo">Bem vindo!</div>
-                
-            <input type="email" placeholder="Nome de usuário ou email" class="nome">
-            
-            <input type="password" placeholder="senha" class="senha">
-
-                <div class="container-box">
-                    <input type="checkbox" id="box" name="box">
-                    <label for="lembrar">Mantenha-me conectado</label>
-                </div>
-
-                <div class="esqueceu">Esqueceu sua senha? <a href="google.com" style="text-decoration: none; color: white;">Recupere com PIN ou email</a></div>
+            <i class="material-icons">arrow_back_ios</i>
+            <span class="voltar">Voltar</span>
+        </a>
         
-                <a href class="entrar" style="text-decoration: none">Entrar</a>
+    </div>
+</nav>
+
+<!-- <section class="banner-login">
+<img src="./img/banner-login.png" alt="banner do lugar">
+</section> -->
+
+<section class="quadrado">
+    <section class="cadastro">
+        <div class="logocadastro">
+            <img src="./img/catatauimg.png">
+        </div>
+        <h1 class="primeiro">Entrar no catatau</h1>
+        
+        <div class="segundo">Bem vindo ao Catatau Lanches!</div>
+        
+        <input type="text" placeholder="Nome de usuário ou email" title="Digite seu nome completo" class="nome">
     
-                <a href="/cadastro/menu.html" class="criar" style="text-decoration: none">Criar uma conta</a>
-        </section>
-    </section>  
-    
+        <input type="password" placeholder="Senha" class="senha">
+        
+        <div class="container-box">
+            <input type="checkbox" id="box" name="box">
+            <label for="lembrar">Mantenha-me conectado</label>
+        </div>
+        <a href class="cadastrar" style="text-decoration: none">Entrar</a>
+        <a href="/cadastro/menu.html" class="existente" style="text-decoration: none">Criar uma conta</a>
+        
+    </section>
+</section>
+<footer><p>&copy; 2026 Catatau Lanches. Todos os direitos reservados.</p></footer>
 </body>
+
 </html>
