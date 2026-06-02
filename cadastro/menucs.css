@@ -53,15 +53,6 @@ body {
   z-index: 15;
 }
 
-/* .banner-login img {
-  position: absolute;
-  opacity: 0.5;
-  margin-top: px;
-  width: 100%;
-  height: auto;
-  z-index: -100;
-} */
-
 .voltar-menu {
   position: absolute;
   font-size: 25px;
@@ -124,7 +115,7 @@ body {
   z-index: 100;
   transform: scale(0.8);
   border: black solid 2px
-  
+
 }
 
 .primeiro {
@@ -146,17 +137,18 @@ body {
 }
 
 .nome {
+  color: white;
   background-color: #c43340;
   font-size: 15px;
   padding: 8px;
   width: 55%;
-  color: white;
   border: 2px solid #ad1a06;
   border-radius: 5px;
   margin: 2px;
 }
+
 .nome::placeholder{
-  color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 .email {
@@ -169,10 +161,10 @@ body {
   border-radius: 5px;
   margin: 2px;
 }
-.email::placeholder{
-    color: rgb(53, 53, 53);
-}
 
+.email::placeholder{
+  color: rgb(202, 202, 202);
+}
 
 #CPF {
   background-color: #c43340;
@@ -185,7 +177,7 @@ body {
   margin: 2px;
 }
 #CPF::placeholder{
-    color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 .container-tel {
@@ -206,7 +198,7 @@ body {
   display: inline-block;
 }
 .ddd::placeholder{
-    color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 .numero {
@@ -221,7 +213,7 @@ body {
   margin-left: 0px;
 }
 .numero::placeholder{
-    color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 .senha {
@@ -235,7 +227,7 @@ body {
   margin: 2px;
 }
 .senha::placeholder{
-    color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 
@@ -250,14 +242,14 @@ body {
   margin: 2px;
 }
 .repetir-senha::placeholder{
-    color: rgb(53, 53, 53);
+  color: rgb(202, 202, 202);
 }
 
 .container-box {
   display: flex;
   justify-content: left;
   align-items: center;
-  font-size: 13px;
+  font-size: 15px;
   gap: 5px;
   margin-bottom: 10px;
   color: black;
@@ -293,13 +285,80 @@ body {
   margin-bottom: 40px;
 }
 
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;;
-  height: 100px;
-  background-color: var(--color-catatau-cream);
+.main-footer {
+    background-color: #502314; /* Marrom escuro para contrastar com o vermelho do site */
+    color: white;
+    padding: 40px 20px 10px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 300px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #ffc107; /* Amarelo para destacar o nome */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-logo span {
+    color: #bc0a00; /* Vermelho Catatau */
+}
+
+.footer-col h3 {
+    color: #ffc107;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #bc0a00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-col ul {
+    list-style: none;
+    /* padding: 0; */
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fcf8f3;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffc107;
+    padding-left: 5px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fcf8f3;
+}
+
+/* Barra de Direitos Autorais */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    color: gray;
 }
 
 /* Media query para telas de 1024px de largura ou menos */
@@ -340,8 +399,6 @@ footer{
     .numero { width: 70%; }
 }
 
-@media (max-width: 1500px) {
-/* Media query para telas de 900px de largura ou menos (Tablets e telas compactas) */
 @media (max-width: 900px) {
     
     /* 1. Remove o position absolute e centraliza a Navbar */
@@ -394,5 +451,27 @@ footer{
     .cadastrar, .existente {
         width: 70%;
     }
-}
+
+
+            /* FOOTER */
+   .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px; /* Diminui o espaço geral entre as colunas */
+    }
+
+    .footer-col {
+        flex: none; /* Impede que a coluna tente esticar para preencher espaço vertical */
+        width: 100%;
+        margin-bottom: 10px; /* Controla o espaço entre uma seção e outra */
+    }
+
+    .footer-col h3 {
+        display: block;
+        margin: 0 auto 10px auto; /* Reduz o espaço abaixo do título */
+    }
+    
+    .main-footer {
+        padding: 20px 20px 10px 20px; /* Reduz o espaçamento interno do footer no topo */
+    }
 }

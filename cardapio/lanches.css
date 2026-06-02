@@ -1,3 +1,8 @@
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 :root {
   --color-catatau-cream: #f5ebdc; 
   --color-catatau-brown: #502314; 
@@ -12,10 +17,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: var(--color-catatau-cream);
-}
-
 .top-banner {
   background-color: var(--color-catatau-orange);
   color: var(--color-bk-brown);
@@ -25,32 +26,41 @@ body {
   font-weight: bold;
 }
 
+.voltar-menu {
+  position: absolute;
+  font-size: 25px;
+  color: var(--color-catatau-brown);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  position: absolute;
+  left: 15%;  
+  z-index: 50;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1600px;
-  height: 120px;
-}
-
-.logonav img {
-  position: relative;
-  left: 100px;
-  top: 30px;
-  width: 150px;
-  cursor: pointer;
-  border-radius: 10%;
-  border: solid 1px;
+  width: 100%;
+  height: 90px;
+  background-color: var(--color-catatau-cream);
+  box-sizing: border-box;
 }
 
 .nav-links {
   display: flex;
-  position: relative;
+  position: absolute;
+  left: 36%;
   list-style: none;
-  gap: 50px;
+  align-items: center;
+  gap: 40px; 
 }
 
-.nav-links a{
+.nav-links a {
   font-size: 18px;
   text-decoration: none;
   color: var(--color-catatau-brown);
@@ -60,18 +70,6 @@ body {
 
 .nav-links a:hover {
   color: var(--color-vermelhao);
-}
-
-.user-area {
-  font-size: 14px;
-  color: var(--color-catatau-brown);
-  padding: 30px;
-}
-
-.user-area a{
-  text-decoration: underline;
-  color: var(--color-catatau-brown);
-  font-weight: bold;
 }
 
 .hero {
@@ -84,16 +82,91 @@ body {
   display: block;
 }
 
-.menu-hamburguer i{
-      display: none;
-      font-size: 40px;
-      border: solid 2px;
-      border-radius: 15%;
-      position: relative;
-      margin-left: -240px ;
-    }
+.cardapio-up{
+display: none;
+}
 
-/* Configuração Principal do Footer */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: column;
+  padding: 20px;
+  border: none;
+}
+
+legend {
+    font-size: 35px;
+    font-weight: bold;
+    color: #502314;
+    padding: 80px 0px 10px;
+}
+
+.grid-sanduiches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grid-sanduiches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid #f0eae1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    background-color: #f5ebd9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.badge-novo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #d62300;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.card-item h3 {
+    font-size: 18px;
+    color: #502314;
+    margin: 0;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
 .main-footer {
     background-color: #502314; /* Marrom escuro para contrastar com o vermelho do site */
     color: white;
@@ -170,7 +243,6 @@ body {
     color: gray;
 }
 
-
 @media (max-width: 768px) {
     
     .nav-links {
@@ -189,6 +261,19 @@ body {
       z-index: 9990;
     }
 
+    .cardapio-up{
+        display: flex;
+        position: absolute;
+        text-align: center;
+        font-size: 25px;
+        color: var(--color-catatau-brown);
+        left: 250%;
+    }
+    
+    .cardapio-apaga{
+        display: none;
+    }
+
     .nav-links a {
       font-size: 90%; 
       display: flex;
@@ -202,25 +287,6 @@ body {
     .navbar {
       Justify-content: center; 
     }
-    
-    .user-area {
-      display: none;
-      position: absolute;
-      right: 15%;
-      font-size: 11px;
-    }
-    
-    .logonav img {
-      position: static;      
-      margin: 30px;
-      margin-bottom: -25px;
-      width: 110px; 
-    }
-
-    header {
-        position: relative;
-        z-index: 11;
-    }
 
     .hero {
         position: relative;
@@ -230,16 +296,22 @@ body {
     body {
       padding-bottom: 70px;
     }
-
-    .menu-hamburguer i{
-      font-size: 40px;
-      border: solid 2px;
-      border-radius: 15%;
-      position: relative;
-      margin-left: -240px ;
+ 
+    .voltar-menu {
+        position: absolute;
+        font-size: 25px;
+        color: var(--color-catatau-brown);
+        display: flex;
+        left: 5%;
+        font-weight: 700;
+        text-decoration: none;
+        padding-top: 4px;
+        margin-left: 0px;
+        z-index: 50;
     }
 
-  .footer-container {
+        /* FOOTER */
+   .footer-container {
         flex-direction: column;
         text-align: center;
         gap: 15px; /* Diminui o espaço geral entre as colunas */
@@ -259,9 +331,4 @@ body {
     .main-footer {
         padding: 20px 20px 10px 20px; /* Reduz o espaçamento interno do footer no topo */
     }
-
-  }
-
-
-
-
+}
