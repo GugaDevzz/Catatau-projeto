@@ -238,9 +238,9 @@
 
     /* 2. Corrige o botão voltar para ele não bater no formulário */
     .voltar-menu {
-        margin-left: 0;    /* Zera a margem fixa que jogava ele pra direita */
-        left: 5%;          /* Alinha ele na esquerda junto com o logo */
-        margin-top: 180px; /* Ajusta a altura dele para ficar abaixo do logo */
+        margin: 0;
+        position: relative;
+        bottom: 60px;
         font-size: 20px;   /* Diminui um pouco a fonte */
     }
 
@@ -286,3 +286,24 @@
         padding: 20px 20px 10px 20px; /* Reduz o espaçamento interno do footer no topo */
     }
 }
+
+@media (max-width: 500px) {
+
+    .logonav img {
+    margin: 0px;
+    position: relative;
+    top: 40px;
+    width: 90px;
+    }
+
+    /* 2. Corrige o botão voltar para ele não bater no formulário */
+    .voltar-menu {
+        margin: 0;
+        position: relative;
+        left: 30%;
+        top: 30px;
+        font-size: 20px;   /* Diminui um pouco a fonte */
+    }
+
+}
+
